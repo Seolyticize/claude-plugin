@@ -1,0 +1,8 @@
+{
+  "name": "seolyticize",
+  "version": "0.1.0",
+  "description": "SEO work for agencies through Seolyticize: keyword research, rank tracking, audits, Search Console and GA4, AI visibility, competitors, and client reports — as ready-made workflows over the Seolyticize MCP server.",
+  "author": { "name": "Seolyticize" },
+  "homepage": "https://seolyticize.com/developers",
+  "keywords": ["seo", "rank-tracking", "search-console", "ga4", "ai-visibility", "agency"]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "seolyticize",
+  "owner": {
+    "name": "Seolyticize",
+    "url": "https://seolyticize.com"
+  },
+  "plugins": [
+    {
+      "name": "seolyticize",
+      "source": "./plugins/seolyticize",
+      "description": "SEO work through Seolyticize: onboarding, audits, rankings, Search Console and GA4, AI visibility, reports."
+    }
+  ]
+}
