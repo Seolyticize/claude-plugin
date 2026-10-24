@@ -9,29 +9,19 @@ SEO workflows — onboarding a site, technical audits, rank tracking reviews, co
 /plugin install seolyticize@seolyticize
 ```
 
+The same skills, with install paths for Codex, Cursor, Copilot, Gemini and every other agent, are in [Seolyticize/skills](https://github.com/Seolyticize/skills).
+
 The plugin connects to `https://seolyticize.com/api/mcp`; Claude Code signs you in the first time. Prefer a key? `claude mcp add --transport http seolyticize https://seolyticize.com/api/mcp --header "Authorization: Bearer $SEOLYTICIZE_API_KEY"`.
 
-## Other agents
+## Skills
 
-Any MCP client can connect to `https://seolyticize.com/api/mcp`:
+Eighteen workflows: `seolyticize` (the foundation: ways in, conventions, and which skill to load for what), client onboarding, the weekly loop, technical audits and fixing them in code, release checks, keyword research, content opportunities, briefs and writing, rank reviews, competitors, link building, local SEO, AI visibility, analytics and conversions, monthly reports, spend and costs, and alerts and monitoring.
 
-- **Claude (web/desktop), ChatGPT, Cursor:** add it as a custom connector / remote MCP server; they sign in the same way.
-- **Clients without OAuth:** create an API key under Settings → API keys and send it as `Authorization: Bearer <key>`.
+## How every skill behaves
 
-## Workflows
-
-| Skill                 | For                                                                        |
-| --------------------- | -------------------------------------------------------------------------- |
-| client-onboarding     | Create a client, draft its brief from the site, connect and start tracking |
-| keyword-research      | Expand seeds, judge difficulty and intent, shortlist and save              |
-| rank-tracking-review  | Explain movements: URL swaps, SERP features, device split                  |
-| technical-audit       | Crawl, index coverage, vitals, agent readiness, a fix list                 |
-| content-opportunities | Near-misses valued by GA4, decay, cannibalisation, gaps                    |
-| competitor-analysis   | Search competitors, gaps, link intersect, AI mentions                      |
-| link-prospecting      | Realistic link prospects and pitch angles                                  |
-| ai-visibility-audit   | What assistants say, who they name, what they cite                         |
-| monthly-client-report | The client-facing report, saved and shareable                              |
-
-Every workflow reads the client brief first, quotes paid calls with `estimate_cost` before making them (and passes the quote as `maxCostMicros`), and records its conclusions in the brief's research log.
+- It reads the client brief first and records what it concluded in the brief's research log.
+- It quotes before it spends, tells you the cost, and passes the quote as `maxCostMicros` so a call cannot cost more than agreed.
+- Bulk writes are previewed with `dryRun` first.
+- It never turns unknown into zero, and says when a figure is partial or a heuristic.
 
 License: MIT.
